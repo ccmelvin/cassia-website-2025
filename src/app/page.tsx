@@ -25,7 +25,7 @@ export default function ComingSoonPage() {
               rel="noopener noreferrer"
             >
               <RiYoutubeLine size={28} />
-              <span className="sr-only">Instagram</span>
+              <span className="sr-only">Youtube</span>
             </Link>
             <Link
               href="https://www.instagram.com/cassiacmelvin/"
