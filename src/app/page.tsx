@@ -73,7 +73,7 @@ export default function ComingSoonPage() {
           <br />
           <br />
           Vou compartilhar como transformo receitas brasileiras com ingredientes
-          americanos, recriando os sabores da nossa terra de um jeito único.
+          americanos, recriando os sabores da nossa terra de um jeito único e facil.
           <br />
           <br />
           Além disso, vou mostrar um pouco da minha vida em um lugar que poucos
