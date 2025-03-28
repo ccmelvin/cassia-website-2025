@@ -73,14 +73,13 @@ export default function ComingSoonPage() {
           <br />
           <br />
           Vou compartilhar como transformo receitas brasileiras com ingredientes
-          americanos, recriando os sabores da nossa terra de um jeito único.
+          americanos, recriando os sabores da nossa terra de um jeito único e facil.
           <br />
           <br />
           Além disso, vou mostrar um pouco da minha vida em um lugar que poucos
           conhecem em uma cidade do interior dos Estados Unidos.
           <br/> <br/>
-          O estado da
-          Carolina do Norte (NC), as praias do Atlântico (como Outer Banks,
+          O estado da Carolina do Norte (NC), tem praias do Atlântico (como Outer Banks,
           famosa por seus faróis e dunas) até as montanhas dos Apalaches (como a
           região de Asheville, com florestas e cachoeiras).
         </p>
