@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cassia Melvin's Personal Website - Brazilian Recipes and North Carolina Living
 
-## Getting Started
+A Next.js-powered personal website that showcases Brazilian recipes adapted with American ingredients and shares lifestyle content about living in North Carolina. The website features a modern, responsive design with dark mode support and seamless social media integration.
 
-First, run the development server:
+This project combines culinary expertise with lifestyle content, offering visitors authentic Brazilian recipes reimagined with locally available ingredients, alongside insights into life in North Carolina's diverse regions - from the Outer Banks' coastal beauty to Asheville's mountain landscapes. Built with Next.js and TypeScript, the website delivers a fast, accessible, and visually appealing user experience with built-in theme support and social media integration.
+
+## Repository Structure
+```
+.
+├── src/                          # Source code directory
+│   ├── app/                     # Next.js app directory containing core application files
+│   │   ├── globals.css         # Global styles and theme configuration
+│   │   ├── layout.tsx         # Root layout component with theme and metadata setup
+│   │   └── page.tsx          # Main landing page component
+│   └── components/            # Reusable component directory
+│       └── theme-provider.tsx # Theme management component
+├── next.config.ts              # Next.js configuration file
+├── tsconfig.json              # TypeScript configuration
+├── eslint.config.mjs          # ESLint configuration for code quality
+├── postcss.config.mjs         # PostCSS configuration for Tailwind CSS
+└── package.json              # Project dependencies and scripts
+```
+
+## Usage Instructions
+### Prerequisites
+- Node.js (v14.0.0 or higher)
+- npm (v6.0.0 or higher) or yarn
+- Git
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone <repository-url>
+cd cassia-website-2025
+
+# Install dependencies
+npm install
+# or
+yarn install
+
+# Start development server
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Quick Start
+1. After installation, the development server will run at `http://localhost:3000`
+2. The main landing page will display with:
+   - Author information and social media links
+   - Hero image section
+   - Contact link with hover effects
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```typescript
+// Example of adding a new page component
+// src/app/recipes/page.tsx
+export default function RecipesPage() {
+  return (
+    <main className="min-h-screen bg-gradient-to-br from-lime-200 via-yellow-100 to-lime-200">
+      <h1>Brazilian Recipes</h1>
+      {/* Add your content here */}
+    </main>
+  );
+}
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### More Detailed Examples
 
-## Learn More
+1. Using the Theme Provider:
+```typescript
+import { ThemeProvider } from "@/components/theme-provider"
 
-To learn more about Next.js, take a look at the following resources:
+function MyComponent() {
+  return (
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+      {/* Your component content */}
+    </ThemeProvider>
+  );
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Adding Social Media Links:
+```typescript
+import { RiInstagramLine } from "react-icons/ri";
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<Link
+  href="https://www.instagram.com/cassiacmelvin/"
+  className="hover:opacity-70 transition-opacity"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <RiInstagramLine size={28} />
+  <span className="sr-only">Instagram</span>
+</Link>
+```
 
-## Deploy on Vercel
+### Troubleshooting
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Theme Not Working
+- Issue: Dark mode not applying correctly
+- Solution: Check if ThemeProvider is properly wrapped around your component
+- Debug: Enable system theme detection with `enableSystem` prop
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Image Loading Issues
+- Issue: Images not displaying or slow loading
+- Solution: Ensure proper usage of Next.js Image component with required props
+- Debug: Check image paths and verify `next.config.ts` image configuration
+
+## Data Flow
+The website follows a component-based architecture where theme settings and page content are managed through React context and Next.js routing.
+
+```ascii
+[User Input] -> [Theme Provider] -> [Layout Component] -> [Page Components]
+                      ↓                     ↓
+                [Theme Context]    [Social Media Links]
+                      ↓                     ↓
+                [Style Updates]     [External Services]
+```
+
+Component Interactions:
+- ThemeProvider manages dark/light mode preferences
+- Layout component provides consistent structure across pages
+- Page components render specific content sections
+- Social media links connect to external platforms
+- Image optimization handled by Next.js Image component

@@ -1,103 +1,94 @@
+"use client";
+import Link from "next/link";
+import { RiTiktokLine, RiInstagramLine, RiPinterestLine } from "react-icons/ri";
 import Image from "next/image";
+import { Mail } from "react-feather";
 
-export default function Home() {
+export default function ComingSoonPage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen bg-gradient-to-br from-lime-200 via-yellow-100 to-lime-200 text-teal-800 flex flex-col md:flex-row">
+      {/* Left Section with Content */}
+      <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-between order-1 md:order-none">
+        <div>
+          <h1 className="text-4xl md:text-6xl font-serif tracking-tight mt-6">
+            Cassia Melvin
+            <br />
+            and Alex 🐶
+          </h1>
+          
+          {/* Social Links */}
+          <div className="flex gap-6 mt-8">
+            <Link
+              href="https://www.instagram.com/cassiacmelvin/"
+              className="hover:opacity-70 transition-opacity"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <RiInstagramLine size={28} />
+              <span className="sr-only">Instagram</span>
+            </Link>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <Link
+              href="https://www.pinterest.com/cassiamelvin/"
+              className="hover:opacity-70 transition-opacity"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <RiPinterestLine size={28} />
+              <span className="sr-only">Pinterest</span>
+            </Link>
+
+            <Link
+              href="https://www.tiktok.com/@cassiamelvin"
+              className="hover:opacity-70 transition-opacity"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <RiTiktokLine size={28} />
+              <span className="sr-only">Twitter</span>
+            </Link>
+          </div>
+
+          {/* Contact Link */}
+          <Link
+            href="/contact"
+            className="flex items-center gap-3 mt-6 w-fit p-3 hover:bg-white/30 rounded-lg transition-colors group"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <Mail size={20} className="text-teal-800" />
+            <span className="text-xl">Contato</span>
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <p className="text-lg md:text-xl max-w-md mt-12 md:mt-0">
+          Em breve, meu novo site estará no ar!
+          <br />
+          <br />
+          Vou compartilhar como transformo receitas brasileiras com ingredientes
+          americanos, recriando os sabores da nossa terra de um jeito único.
+          <br />
+          <br />
+          Além disso, vou mostrar um pouco da minha vida em um lugar que poucos
+          conhecem em uma cidade do interior dos Estados Unidos.
+          <br/> <br/>
+          O estado da
+          Carolina do Norte (NC), as praias do Atlântico (como Outer Banks,
+          famosa por seus faróis e dunas) até as montanhas dos Apalaches (como a
+          região de Asheville, com florestas e cachoeiras).
+        </p>
+      </div>
+
+      {/* Right Section with Hero Image - Fixed for mobile */}
+      <div className="w-full md:w-1/2 h-96 md:h-auto relative order-0 md:order-none">
+        <Image
+          src="/cassiamelvin-alex.jpeg"
+          alt="Cassia Melvin and Alex"
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-lime-200/10 via-transparent to-transparent"></div>
+      </div>
+    </main>
   );
 }
