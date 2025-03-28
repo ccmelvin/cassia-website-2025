@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { RiTiktokLine, RiInstagramLine, RiPinterestLine } from "react-icons/ri";
+import { RiTiktokLine, RiInstagramLine, RiPinterestLine, RiYoutubeLine } from "react-icons/ri";
 import Image from "next/image";
 import { Mail } from "react-feather";
 
@@ -18,6 +18,15 @@ export default function ComingSoonPage() {
           
           {/* Social Links */}
           <div className="flex gap-6 mt-8">
+            <Link
+              href="https://www.youtube.com/@CassiaMelvin/"
+              className="hover:opacity-70 transition-opacity"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <RiYoutubeLine size={28} />
+              <span className="sr-only">Instagram</span>
+            </Link>
             <Link
               href="https://www.instagram.com/cassiacmelvin/"
               className="hover:opacity-70 transition-opacity"
